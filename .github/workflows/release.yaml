@@ -1,0 +1,14 @@
+name: gihub-release
+
+on:
+  push:
+    tags: v*.*.*
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: softprops/action-gh-release@v2.0.6
+        name: Create release
+        with:
+          token: ${{ secrets.RELEASE_TOKEN }}

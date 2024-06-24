@@ -1,0 +1,16 @@
+name: publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: publish role
+        uses: 0x022b/galaxy-role-import-action@1.0.0
+        with:
+          galaxy_api_key: ${{ secrets.ANSIBLE_GALAXY_API_KEY }}

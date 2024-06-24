@@ -1,0 +1,16 @@
+name: lint
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - v*.*.*
+
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: lint
+        uses: ansible/ansible-lint@v24.6.1
