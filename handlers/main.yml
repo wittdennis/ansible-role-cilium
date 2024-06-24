@@ -1,2 +1,7 @@
 ---
-# handlers file for role_remplate
+# handlers file for roles/cilium
+- name: Unarchive cilium binary
+  ansible.builtin.unarchive:
+    src: "/tmp/cilium-linux-{{ cilium_arch }}.tar.gz"
+    dest: /usr/local/bin
+    remote_src: true

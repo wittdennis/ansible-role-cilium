@@ -1,0 +1,64 @@
+---
+- name: DOWNLOAD | Determine host architecture
+  ansible.builtin.shell:
+    cmd: |
+      ARCH=amd64
+      if [ "$(uname -m)" = "aarch64" ]; then ARCH=arm64; fi
+      echo $ARCH
+  changed_when: false
+  register: architecture
+  tags:
+    - cilium
+    - cilium-download
+
+- name: DOWNLOAD | Set download url fact
+  ansible.builtin.set_fact:
+    download_url: "https://github.com/cilium/cilium-cli/releases/download/{{ cilium_cli_version }}/cilium-linux-{{ architecture.stdout }}.tar.gz"
+  tags:
+    - cilium
+    - cilium-download
+
+- name: DOWNLOAD | Set current cli version
+  ansible.builtin.shell:
+    cmd: |
+      set -o pipefail
+      /usr/local/bin/cilium version --client | grep cilium-cli | cut -d " " -f 2
+  changed_when: false
+  failed_when: false
+  register: current_cilium_cli_version
+  tags:
+    - cilium
+    - cilium-download
+
+- name: DOWNLOAD | Download cilium-cli archive
+  ansible.builtin.get_url:
+    url: "{{ download_url }}"
+    checksum: "sha256:{{ download_url }}.sha256sum"
+    dest: /tmp
+    owner: "{{ ansible_user_id }}"
+    mode: "0644"
+  when: current_cilium_cli_version.stdout != cilium_cli_version | default(false)
+  notify: Unarchive cilium binary
+  tags:
+    - cilium
+    - cilium-download
+
+- name: Flush handlers
+  ansible.builtin.meta: flush_handlers
+
+- name: DOWNLOAD | Create symlink for cilium in /usr/local/sbin
+  ansible.builtin.file:
+    state: link
+    src: /usr/local/bin/cilium
+    dest: /usr/local/sbin/cilium
+  tags:
+    - cilium
+    - cilium-download
+
+- name: DOWNLOAD | Delete cilium archive
+  ansible.builtin.file:
+    path: "/tmp/cilium-linux-{{ architecture.stdout }}.tar.gz"
+    state: absent
+  tags:
+    - cilium
+    - cilium-download

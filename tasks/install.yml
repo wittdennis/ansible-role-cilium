@@ -1,0 +1,30 @@
+---
+- name: INSTALL | Check cilium status
+  ansible.builtin.command:
+    cmd: "/usr/local/bin/cilium status"
+  register: cilium_status
+  failed_when: false
+  changed_when: false
+  tags:
+    - cilium
+    - cilium-install
+
+- name: INSTALL | Install cilium
+  ansible.builtin.command:
+    cmd: "/usr/local/bin/cilium install --version {{ cilium_version }}"
+  register: cilium_install
+  changed_when: cilium_install.rc == 0
+  when: '''daemonsets.apps "cilium" not found'' in cilium_status.stdout'
+  tags:
+    - cilium
+    - cilium-install
+
+- name: INSTALL | Check cilium status
+  ansible.builtin.command:
+    cmd: "/usr/local/bin/cilium status --wait"
+  register: cilium_status
+  changed_when: false
+  failed_when: cilium_status.rc != 0
+  tags:
+    - cilium
+    - cilium-install

@@ -1,0 +1,45 @@
+---
+- name: HUBBLE | Check hubble status
+  ansible.builtin.shell:
+    cmd: |
+      set -e
+      set -o pipefail
+      /usr/local/bin/cilium status -o json | jq -r '.errors."hubble-relay"."hubble-relay".Disabled'
+  register: cilium_pre_status
+  changed_when: false
+  tags:
+    - cilium
+    - cilium-hubble
+
+- name: HUBBLE | Enable hubble
+  when: "cilium_pre_status.stdout == 'true' and cilium_enable_hubble"
+  register: enable_hubble_cmd
+  changed_when: enable_hubble_cmd.rc == 0
+  ansible.builtin.command:
+    cmd: "/usr/local/bin/cilium hubble enable --ui"
+  tags:
+    - cilium
+    - cilium-hubble
+
+- name: HUBBLE | Disable hubble
+  when: "cilium_pre_status.stdout == 'false' and not cilium_enable_hubble"
+  register: disable_hubble_cmd
+  changed_when: disable_hubble_cmd.rc == 0
+  ansible.builtin.command:
+    cmd: "/usr/local/bin/cilium hubble disable"
+  tags:
+    - cilium
+    - cilium-hubble
+
+- name: HUBBLE | Check hubble status
+  ansible.builtin.shell:
+    cmd: |
+      set -e
+      set -o pipefail
+      /usr/local/bin/cilium status --wait -o json | jq -r '.errors."hubble-relay"."hubble-relay" | "\(.Disabled) \(.Errors)"'
+  register: cilium_post_status
+  changed_when: false
+  failed_when: "(cilium_post_status.stdout != 'false null' and cilium_enable_hubble) or (cilium_post_status.stdout != 'true null' and not cilium_enable_hubble)" # noqa: yaml[line-length]
+  tags:
+    - cilium
+    - cilium-hubble

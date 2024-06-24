@@ -1,2 +1,32 @@
 ---
-# tasks file for role_remplate
+- name: CILIUM | Install needed packages
+  become: true
+  ansible.builtin.package:
+    state: present
+    name:
+      - tar
+      - gzip
+      - jq
+  tags:
+    - always
+
+- name: CILIUM | Download
+  ansible.builtin.include_tasks:
+    file: download-cli.yml
+  tags:
+    - cilium
+    - cilium-download
+
+- name: CILIUM | Install
+  ansible.builtin.include_tasks:
+    file: install.yml
+  tags:
+    - cilium
+    - cilium-install
+
+- name: CILIUM | Hubble
+  ansible.builtin.include_tasks:
+    file: hubble.yml
+  tags:
+    - cilium
+    - cilium-hubble
