@@ -2,10 +2,6 @@ name: lint
 
 on:
   push:
-    branches:
-      - "**"
-    tags:
-      - v*.*.*
 
 jobs:
   lint:
