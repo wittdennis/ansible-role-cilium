@@ -1,16 +1,28 @@
 name: gihub-release
 
 on:
-  push:
-    tags:
-      - v*.*.*
-      - "*.*.*"
+  workflow_dispatch:
 
 jobs:
   release:
     runs-on: ubuntu-22.04
     steps:
-      - uses: softprops/action-gh-release@v2.0.6
-        name: Create release
+      - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
+
+      - name: bump version
+        id: release
+        uses: oknozor/cocogitto-action@v3.8
+        with:
+          release: true
+
+      - name: generate Changelog
+        run: cog changelog --at ${{ steps.release.outputs.version }} -t full_hash > GITHUB_CHANGELOG.md
+
+      - uses: softprops/action-gh-release@v2.0.6
+        name: create release
+        with:
+          body_path: GITHUB_CHANGELOG.md
+          tag_name: ${{ steps.release.outputs.version }}
           token: ${{ secrets.RELEASE_TOKEN }}
