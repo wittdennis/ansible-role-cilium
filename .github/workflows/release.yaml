@@ -2,7 +2,9 @@ name: gihub-release
 
 on:
   push:
-    tags: v*.*.*
+    tags:
+      - v*.*.*
+      - "*.*.*"
 
 jobs:
   release:
