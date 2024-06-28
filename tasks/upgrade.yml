@@ -1,0 +1,21 @@
+---
+- name: UPGRADE | Check cilium version
+  ansible.builtin.command:
+    cmd: "/usr/local/bin/cilium version"
+  register: cilium_version_cmd
+  failed_when: false
+  changed_when: false
+  tags:
+    - cilium
+    - cilium-upgrade
+
+- name: UPGRADE | Extract current running version
+  ansible.builtin.set_fact:
+    cilium_current_version: "{{ cilium_version_cmd.stdout_lines.3.split(':').1.replace(' ', '') }}"
+
+- name: UPGRADE | Upgrade cilium
+  when: cilium_current_version != cilium_version
+  register: cilium_upgrade_cmd
+  ansible.builtin.command:
+    cmd: "/usr/local/bin/cilium upgrade --version {{ cilium_version }}"
+  changed_when: cilium_upgrade_cmd.rc == 0
