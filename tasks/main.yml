@@ -30,3 +30,10 @@
   tags:
     - cilium
     - cilium-hubble
+
+- name: CILIUM | Upgrade
+  ansible.builtin.include_tasks:
+    file: upgrade.yml
+  tags:
+    - cilium
+    - cilium-upgrade
