@@ -1,0 +1,24 @@
+branch_whitelist = []
+disable_bump_commit = false
+disable_changelog = false
+from_latest_tag = false
+generate_mono_repository_global_tag = true
+ignore_merge_commits = false
+post_bump_hooks = []
+post_package_bump_hooks = []
+pre_bump_hooks = []
+pre_package_bump_hooks = []
+skip_ci = "[skip ci]"
+skip_untracked = false
+
+[git_hooks]
+
+[commit_types]
+
+[changelog]
+authors = []
+path = "CHANGELOG.md"
+
+[bump_profiles]
+
+[packages]
