@@ -16,9 +16,10 @@ jobs:
         uses: oknozor/cocogitto-action@v3.8
         with:
           release: true
+          check-latest-tag-only: true
 
-      - name: generate Changelog
-        run: cog changelog --at ${{ steps.release.outputs.version }} -t full_hash > GITHUB_CHANGELOG.md
+      - name: generate changelog
+        run: cog changelog --at ${{ steps.release.outputs.version }} > GITHUB_CHANGELOG.md
 
       - uses: softprops/action-gh-release@v2.0.6
         name: create release
