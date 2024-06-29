@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.3](https://github.com/wittdennis/ansible-role-cilium/compare/de932cd875eee835a48835af806715826e7d6abb..1.1.3) - 2024-06-29
+#### Bug Fixes
+- set additional tag for ansible galaxy - ([216f289](https://github.com/wittdennis/ansible-role-cilium/commit/216f28912488a7b22ab3f3ab9a781184a1201c0c)) - Dennis Witt
+#### Continuous Integration
+- use release token for release workflow - ([de932cd](https://github.com/wittdennis/ansible-role-cilium/commit/de932cd875eee835a48835af806715826e7d6abb)) - Dennis Witt
+
+- - -
+
 ## [1.1.2](https://github.com/wittdennis/ansible-role-cilium/compare/4a88fc18dd7a34d705e3f7fd2a7e06a1d2af6074..1.1.2) - 2024-06-29
 #### Bug Fixes
 - remove sbin symlink for cilium - ([b6ae7f4](https://github.com/wittdennis/ansible-role-cilium/commit/b6ae7f4aef5ea58c485609280e3690e9c71381a3)) - Dennis Witt
