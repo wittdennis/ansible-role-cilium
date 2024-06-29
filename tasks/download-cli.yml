@@ -46,15 +46,6 @@
 - name: Flush handlers
   ansible.builtin.meta: flush_handlers
 
-- name: DOWNLOAD | Create symlink for cilium in /usr/local/sbin
-  ansible.builtin.file:
-    state: link
-    src: /usr/local/bin/cilium
-    dest: /usr/local/sbin/cilium
-  tags:
-    - cilium
-    - cilium-download
-
 - name: DOWNLOAD | Delete cilium archive
   ansible.builtin.file:
     path: "/tmp/cilium-linux-{{ architecture.stdout }}.tar.gz"
