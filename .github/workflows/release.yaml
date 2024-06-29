@@ -13,8 +13,6 @@ jobs:
           token: ${{ secrets.RELEASE_TOKEN }}
 
       - name: setup git config
-        env:
-          GH_APP_ID: ${{ secrets.GH_APP_ID }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
