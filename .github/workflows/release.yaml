@@ -6,17 +6,26 @@ on:
 jobs:
   release:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
     steps:
+      - uses: actions/create-github-app-token@v1.8.1
+        id: app-token
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: setup git config
+        env:
+          GH_APP_ID: ${{ secrets.GH_APP_ID }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git config --global user.email github-actions@github.com
-          git config --global user.name github-actions
 
       - name: bump version
         id: release
