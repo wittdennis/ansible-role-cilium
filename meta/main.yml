@@ -4,6 +4,10 @@ galaxy_info:
   namespace: wittdennis
   role_name: cilium
   license: MIT
+  platforms:
+    - name: GenericLinux
+      versions:
+        - all
 
   min_ansible_version: "2.1"
 
