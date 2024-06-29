@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.2](https://github.com/wittdennis/ansible-role-cilium/compare/4a88fc18dd7a34d705e3f7fd2a7e06a1d2af6074..1.1.2) - 2024-06-29
+#### Bug Fixes
+- remove sbin symlink for cilium - ([b6ae7f4](https://github.com/wittdennis/ansible-role-cilium/commit/b6ae7f4aef5ea58c485609280e3690e9c71381a3)) - Dennis Witt
+#### Miscellaneous Chores
+- **(version)** 1.1.1 - ([4a88fc1](https://github.com/wittdennis/ansible-role-cilium/commit/4a88fc18dd7a34d705e3f7fd2a7e06a1d2af6074)) - github-actions
+
+- - -
+
 ## [1.1.1](https://github.com/wittdennis/ansible-role-cilium/compare/4a7650c4e7d2469f3587bc4319ecb5bb04f015f9..1.1.1) - 2024-06-29
 #### Bug Fixes
 - set supported role platforms - ([038bc47](https://github.com/wittdennis/ansible-role-cilium/commit/038bc4720ebf6cd1d3c36ce885b4ba6e52745796)) - Dennis Witt
