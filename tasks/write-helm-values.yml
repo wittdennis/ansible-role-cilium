@@ -3,6 +3,6 @@
   when: cilium_helm_values
   ansible.builtin.copy:
     content: |
-      {{ cilium_helm_values }}
+      {{ cilium_helm_values | to_nice_yaml }}
     dest: /tmp/values.yaml
     mode: "0644"
