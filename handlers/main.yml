@@ -5,3 +5,9 @@
     src: "/tmp/cilium-linux-{{ cilium_arch }}.tar.gz"
     dest: /usr/local/bin
     remote_src: true
+
+- name: Remove helm values file
+  listen: remove_helm_values
+  ansible.builtin.file:
+    path: /tmp/values.yaml
+    state: absent

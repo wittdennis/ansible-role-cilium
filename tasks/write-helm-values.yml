@@ -1,0 +1,8 @@
+---
+- name: Save helm values file
+  when: cilium_helm_values
+  ansible.builtin.copy:
+    content: |
+      {{ cilium_helm_values }}
+    dest: /tmp/values.yaml
+    mode: "0644"

@@ -1,5 +1,5 @@
 ---
-- name: HUBBLE | Check hubble status
+- name: Check hubble status
   ansible.builtin.shell:
     cmd: |
       set -e
@@ -11,7 +11,7 @@
     - cilium
     - cilium-hubble
 
-- name: HUBBLE | Enable hubble
+- name: Enable hubble
   when: "cilium_pre_status.stdout == 'true' and cilium_enable_hubble"
   register: enable_hubble_cmd
   changed_when: enable_hubble_cmd.rc == 0
@@ -21,7 +21,7 @@
     - cilium
     - cilium-hubble
 
-- name: HUBBLE | Disable hubble
+- name: Disable hubble
   when: "cilium_pre_status.stdout == 'false' and not cilium_enable_hubble"
   register: disable_hubble_cmd
   changed_when: disable_hubble_cmd.rc == 0
@@ -31,7 +31,7 @@
     - cilium
     - cilium-hubble
 
-- name: HUBBLE | Check hubble status
+- name: Check hubble status
   ansible.builtin.shell:
     cmd: |
       set -e
