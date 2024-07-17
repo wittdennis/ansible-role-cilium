@@ -1,5 +1,5 @@
 ---
-- name: DOWNLOAD | Determine host architecture
+- name: Determine host architecture
   ansible.builtin.shell:
     cmd: |
       ARCH=amd64
@@ -11,14 +11,14 @@
     - cilium
     - cilium-download
 
-- name: DOWNLOAD | Set download url fact
+- name: Set download url fact
   ansible.builtin.set_fact:
     download_url: "https://github.com/cilium/cilium-cli/releases/download/{{ cilium_cli_version }}/cilium-linux-{{ architecture.stdout }}.tar.gz"
   tags:
     - cilium
     - cilium-download
 
-- name: DOWNLOAD | Set current cli version
+- name: Set current cli version
   ansible.builtin.shell:
     cmd: |
       set -o pipefail
@@ -30,7 +30,7 @@
     - cilium
     - cilium-download
 
-- name: DOWNLOAD | Download cilium-cli archive
+- name: Download cilium-cli archive
   ansible.builtin.get_url:
     url: "{{ download_url }}"
     checksum: "sha256:{{ download_url }}.sha256sum"
@@ -46,7 +46,7 @@
 - name: Flush handlers
   ansible.builtin.meta: flush_handlers
 
-- name: DOWNLOAD | Delete cilium archive
+- name: Delete cilium archive
   ansible.builtin.file:
     path: "/tmp/cilium-linux-{{ architecture.stdout }}.tar.gz"
     state: absent

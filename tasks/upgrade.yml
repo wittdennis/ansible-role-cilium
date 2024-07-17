@@ -1,5 +1,5 @@
 ---
-- name: UPGRADE | Check cilium version
+- name: Check cilium version
   ansible.builtin.command:
     cmd: "/usr/local/bin/cilium version"
   register: cilium_version_cmd
@@ -9,13 +9,21 @@
     - cilium
     - cilium-upgrade
 
-- name: UPGRADE | Extract current running version
+- name: Extract current running version
   ansible.builtin.set_fact:
     cilium_current_version: "{{ cilium_version_cmd.stdout_lines.3.split(':').1.replace(' ', '') }}"
 
-- name: UPGRADE | Upgrade cilium
+- name: Check if helm values are specified
+  ansible.builtin.include_tasks:
+    file: write-helm-values.yml
+
+- name: Upgrade cilium
   when: cilium_current_version != cilium_version
   register: cilium_upgrade_cmd
   ansible.builtin.command:
-    cmd: "/usr/local/bin/cilium upgrade --version {{ cilium_version }}"
+    cmd: >-
+      /usr/local/bin/cilium upgrade
+        --version {{ cilium_version }}
+        {% if cilium_helm_values %}-f /tmp/values.yaml{% endif %}
   changed_when: cilium_upgrade_cmd.rc == 0
+  notify: remove_helm_values

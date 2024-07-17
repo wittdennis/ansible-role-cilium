@@ -1,5 +1,5 @@
 ---
-- name: CILIUM | Install needed packages
+- name: Install needed packages
   become: true
   ansible.builtin.package:
     state: present
@@ -10,28 +10,28 @@
   tags:
     - always
 
-- name: CILIUM | Download
+- name: Download
   ansible.builtin.include_tasks:
     file: download-cli.yml
   tags:
     - cilium
     - cilium-download
 
-- name: CILIUM | Install
+- name: Install
   ansible.builtin.include_tasks:
     file: install.yml
   tags:
     - cilium
     - cilium-install
 
-- name: CILIUM | Hubble
+- name: Hubble
   ansible.builtin.include_tasks:
     file: hubble.yml
   tags:
     - cilium
     - cilium-hubble
 
-- name: CILIUM | Upgrade
+- name: Upgrade
   ansible.builtin.include_tasks:
     file: upgrade.yml
   tags:

@@ -1,5 +1,5 @@
 ---
-- name: INSTALL | Check cilium status
+- name: Check cilium status
   ansible.builtin.command:
     cmd: "/usr/local/bin/cilium status"
   register: cilium_status
@@ -9,17 +9,25 @@
     - cilium
     - cilium-install
 
-- name: INSTALL | Install cilium
+- name: Check if helm values are specified
+  ansible.builtin.include_tasks:
+    file: write-helm-values.yml
+
+- name: Install cilium
   ansible.builtin.command:
-    cmd: "/usr/local/bin/cilium install --version {{ cilium_version }}"
+    cmd: >-
+      /usr/local/bin/cilium install
+        --version {{ cilium_version }}
+        {% if cilium_helm_values %}-f /tmp/values.yaml{% endif %}
   register: cilium_install
   changed_when: cilium_install.rc == 0
   when: '''daemonsets.apps "cilium" not found'' in cilium_status.stdout'
+  notify: remove_helm_values
   tags:
     - cilium
     - cilium-install
 
-- name: INSTALL | Check cilium status
+- name: Check cilium status
   ansible.builtin.command:
     cmd: "/usr/local/bin/cilium status --wait"
   register: cilium_status
