@@ -37,3 +37,6 @@
   tags:
     - cilium
     - cilium-upgrade
+
+- name: Flush handlers
+  ansible.builtin.meta: flush_handlers
