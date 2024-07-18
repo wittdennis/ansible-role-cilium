@@ -2,6 +2,21 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.2.0](https://github.com/wittdennis/ansible-role-cilium/compare/3274bebab6137028602f5ab969358fec62f46f0a..1.2.0) - 2024-07-18
+#### Continuous Integration
+- remove unused secrets variable - ([3274beb](https://github.com/wittdennis/ansible-role-cilium/commit/3274bebab6137028602f5ab969358fec62f46f0a)) - Dennis Witt
+#### Features
+- added ability to specify helm values during install and upgrade - ([df61566](https://github.com/wittdennis/ansible-role-cilium/commit/df61566da92ffb5d22dd049fbe3a9ef3615756e6)) - Dennis Witt
+#### Miscellaneous Chores
+- **(deps)** update dependency cilium/cilium to v1.15.7 - ([9d907cf](https://github.com/wittdennis/ansible-role-cilium/commit/9d907cfbaa1f8f1598770d1d2e3210a1fe3f32c8)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium-cli to v0.16.13 - ([3597aed](https://github.com/wittdennis/ansible-role-cilium/commit/3597aed4142ac8aa912e12bbc2cb53a1e78d6b10)) - wittdennis-renovate[bot]
+- **(deps)** update ansible/ansible-lint action to v24.7.0 - ([1751fb9](https://github.com/wittdennis/ansible-role-cilium/commit/1751fb953c939a96aed03b0821e27e5d06ad6e84)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium-cli to v0.16.12 - ([3b6c5ae](https://github.com/wittdennis/ansible-role-cilium/commit/3b6c5ae8198fd8bd4be21a05ee56c92b4122f01d)) - wittdennis-renovate[bot]
+#### Style
+- add pre-commit config - ([6ba21b0](https://github.com/wittdennis/ansible-role-cilium/commit/6ba21b07564c02bfa7c1f15f0e96ceaae4e6e0fe)) - Dennis Witt
+
+- - -
+
 ## [1.1.3](https://github.com/wittdennis/ansible-role-cilium/compare/de932cd875eee835a48835af806715826e7d6abb..1.1.3) - 2024-06-29
 #### Bug Fixes
 - set additional tag for ansible galaxy - ([216f289](https://github.com/wittdennis/ansible-role-cilium/commit/216f28912488a7b22ab3f3ab9a781184a1201c0c)) - Dennis Witt
