@@ -1,6 +1,6 @@
 ---
 # defaults file for roles/cilium
-cilium_version: "1.16.0" # renovate: datasource=github-releases depName=cilium/cilium versioning=semver
+cilium_version: "1.16.1" # renovate: datasource=github-releases depName=cilium/cilium versioning=semver
 cilium_cli_version: "v0.16.15" # renovate: datasource=github-tags depName=cilium/cilium-cli versioning=semver
 cilium_enable_hubble: false
 cilium_helm_values: {}
