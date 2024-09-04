@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.1](https://github.com/wittdennis/ansible-role-cilium/compare/2ba379bba88dcaae7d56635adceb4dcb924f4bb5..1.3.1) - 2024-09-04
+#### Bug Fixes
+- add \`cilium_upgrade_alway\` flag - ([2ba379b](https://github.com/wittdennis/ansible-role-cilium/commit/2ba379bba88dcaae7d56635adceb4dcb924f4bb5)) - Dennis Witt
+
+- - -
+
 ## [1.3.0](https://github.com/wittdennis/ansible-role-cilium/compare/826c7b6f96d70bbd61eb53740bffd0aabaeee718..1.3.0) - 2024-09-04
 #### Features
 - implement flag to always execute a cilium upgrade - ([297d3ed](https://github.com/wittdennis/ansible-role-cilium/commit/297d3ed549f8e75db649b9ea7964dee07f82462c)) - Dennis Witt
