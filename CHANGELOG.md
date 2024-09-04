@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.0](https://github.com/wittdennis/ansible-role-cilium/compare/826c7b6f96d70bbd61eb53740bffd0aabaeee718..1.3.0) - 2024-09-04
+#### Features
+- implement flag to always execute a cilium upgrade - ([297d3ed](https://github.com/wittdennis/ansible-role-cilium/commit/297d3ed549f8e75db649b9ea7964dee07f82462c)) - Dennis Witt
+#### Miscellaneous Chores
+- **(deps)** update dependency cilium/cilium-cli to v0.16.16 - ([68c351a](https://github.com/wittdennis/ansible-role-cilium/commit/68c351a55a0f3092a4ba35cc9872e40597527c61)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium to v1.16.1 - ([095c7d8](https://github.com/wittdennis/ansible-role-cilium/commit/095c7d8b9c0a8dcc742021a0aba8cc760b7a342e)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium-cli to v0.16.15 - ([a15d3d7](https://github.com/wittdennis/ansible-role-cilium/commit/a15d3d707fca57a25d46ffa2235342ab32fd201c)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium-cli to v0.16.14 - ([1cbd9cb](https://github.com/wittdennis/ansible-role-cilium/commit/1cbd9cbdf3f79a761edbe96bfc6690781d4bad7d)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium to v1.16.0 - ([b853934](https://github.com/wittdennis/ansible-role-cilium/commit/b853934be8e162c3c19cef9e9f79126522c2b8f2)) - wittdennis-renovate[bot]
+- **(deps)** update softprops/action-gh-release action to v2.0.8 - ([814c188](https://github.com/wittdennis/ansible-role-cilium/commit/814c1888ac7aa8e61fa4f0ed43aebb659dc64238)) - wittdennis-renovate[bot]
+- **(deps)** update softprops/action-gh-release action to v2.0.7 - ([826c7b6](https://github.com/wittdennis/ansible-role-cilium/commit/826c7b6f96d70bbd61eb53740bffd0aabaeee718)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.2.0](https://github.com/wittdennis/ansible-role-cilium/compare/3274bebab6137028602f5ab969358fec62f46f0a..1.2.0) - 2024-07-18
 #### Continuous Integration
 - remove unused secrets variable - ([3274beb](https://github.com/wittdennis/ansible-role-cilium/commit/3274bebab6137028602f5ab969358fec62f46f0a)) - Dennis Witt
