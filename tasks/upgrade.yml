@@ -18,7 +18,7 @@
     file: write-helm-values.yml
 
 - name: Upgrade cilium
-  when: cilium_current_version != cilium_version
+  when: cilium_current_version != cilium_version or cilium_upgrade_always
   register: cilium_upgrade_cmd
   ansible.builtin.command:
     cmd: >-
