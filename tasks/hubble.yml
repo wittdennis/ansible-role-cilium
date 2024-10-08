@@ -39,7 +39,7 @@
       /usr/local/bin/cilium status --wait -o json | jq -r '.errors."hubble-relay"."hubble-relay" | "\(.Disabled) \(.Errors)"'
   register: cilium_post_status
   changed_when: false
-  failed_when: "(cilium_post_status.stdout != 'false null' and cilium_enable_hubble) or (cilium_post_status.stdout != 'true null' and not cilium_enable_hubble)" # noqa: yaml[line-length]
+  failed_when: "(cilium_post_status.stdout != 'false []' and cilium_enable_hubble) or (cilium_post_status.stdout != 'true []' and not cilium_enable_hubble)" # noqa: yaml[line-length]
   tags:
     - cilium
     - cilium-hubble
