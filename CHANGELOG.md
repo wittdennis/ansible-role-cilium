@@ -2,6 +2,22 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.2](https://github.com/wittdennis/ansible-role-cilium/compare/6de1f3594ed86f20d686cfa4d6545a3d4fd8bc71..1.3.2) - 2024-10-08
+#### Bug Fixes
+- output change of latest cilium-cli version - ([97dfcc4](https://github.com/wittdennis/ansible-role-cilium/commit/97dfcc4db078be82f0df1e945e666f753d872e3a)) - Dennis Witt
+#### Miscellaneous Chores
+- **(deps)** update dependency cilium/cilium-cli to v0.16.19 - ([44f8c66](https://github.com/wittdennis/ansible-role-cilium/commit/44f8c669616ae3f86ed002216dcb93ccab53cebf)) - wittdennis-renovate[bot]
+- **(deps)** update dependency ubuntu to v24 - ([30238da](https://github.com/wittdennis/ansible-role-cilium/commit/30238da87b6aafa22fbf52451d5e96eea3cbb32f)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium to v1.16.2 - ([426bca7](https://github.com/wittdennis/ansible-role-cilium/commit/426bca73f1d3df524de559732ab945449c4ebdaf)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium-cli to v0.16.18 - ([4dd9acf](https://github.com/wittdennis/ansible-role-cilium/commit/4dd9acf8d518bf95821fafdbda727fcd60cbc4d6)) - wittdennis-renovate[bot]
+- **(deps)** update ansible/ansible-lint action to v24.9.2 - ([8d57977](https://github.com/wittdennis/ansible-role-cilium/commit/8d57977b4372f2d43d123c1581bed65615ead833)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v24.9.2 - ([82aab00](https://github.com/wittdennis/ansible-role-cilium/commit/82aab005318ff2c4d82c34417d92f111a540e85c)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium-cli to v0.16.17 - ([bf49077](https://github.com/wittdennis/ansible-role-cilium/commit/bf490776a915b23a6febbfb1cf0333cc735db5ea)) - wittdennis-renovate[bot]
+- **(deps)** update ansible/ansible-lint action to v24.9.0 - ([42731b2](https://github.com/wittdennis/ansible-role-cilium/commit/42731b2ec0986209046d2751c074c89583ff1cda)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v24.9.0 - ([6de1f35](https://github.com/wittdennis/ansible-role-cilium/commit/6de1f3594ed86f20d686cfa4d6545a3d4fd8bc71)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.3.1](https://github.com/wittdennis/ansible-role-cilium/compare/2ba379bba88dcaae7d56635adceb4dcb924f4bb5..1.3.1) - 2024-09-04
 #### Bug Fixes
 - add \`cilium_upgrade_alway\` flag - ([2ba379b](https://github.com/wittdennis/ansible-role-cilium/commit/2ba379bba88dcaae7d56635adceb4dcb924f4bb5)) - Dennis Witt
