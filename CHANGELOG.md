@@ -2,6 +2,21 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.11](https://github.com/wittdennis/ansible-role-cilium/compare/b49575ffcb7db1c226acfd75a3ef5f8721992037..1.3.11) - 2025-05-16
+#### Bug Fixes
+- **(deps)** update dependency cilium/cilium to v1.17.4 - ([092b5ae](https://github.com/wittdennis/ansible-role-cilium/commit/092b5ae143f6adc12d89a402de738c46cf07e22c)) - wittdennis-renovate[bot]
+#### Miscellaneous Chores
+- **(deps)** update wittdennis/pipelines action to v1.11.19 - ([bf4631a](https://github.com/wittdennis/ansible-role-cilium/commit/bf4631a58a732df3e20ba696f45b090a87d8158f)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.18 - ([8858c23](https://github.com/wittdennis/ansible-role-cilium/commit/8858c23d6b305fed44881e84b728678e98b02e9d)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.17 - ([0e08336](https://github.com/wittdennis/ansible-role-cilium/commit/0e083366de7ebc096a36265b9e41f964414115b0)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.16 - ([8c431b2](https://github.com/wittdennis/ansible-role-cilium/commit/8c431b2dced56390a2bb2e75e8750bf32c48728a)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.4.0 - ([11886ab](https://github.com/wittdennis/ansible-role-cilium/commit/11886abd7879f60cbe8ffa3a3f45215203513e25)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.15 - ([46d5801](https://github.com/wittdennis/ansible-role-cilium/commit/46d5801af669ccf11eda7d89e662055529a2ec18)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.14 - ([1bf69a9](https://github.com/wittdennis/ansible-role-cilium/commit/1bf69a9b6329cb49eacde2669770d3ea9e784b2a)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.13 - ([b49575f](https://github.com/wittdennis/ansible-role-cilium/commit/b49575ffcb7db1c226acfd75a3ef5f8721992037)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.3.10](https://github.com/wittdennis/ansible-role-cilium/compare/1e77385c713dd7c762e3df3eb7e539852e82ab18..1.3.10) - 2025-04-16
 #### Bug Fixes
 - **(deps)** update dependency cilium/cilium to v1.17.3 - ([dd95c4c](https://github.com/wittdennis/ansible-role-cilium/commit/dd95c4cf429311b2f7e245203ed17e84a47b8f8a)) - wittdennis-renovate[bot]
