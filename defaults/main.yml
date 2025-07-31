@@ -1,5 +1,5 @@
 ---
-cilium_version: "1.17.6" # renovate: datasource=github-releases depName=cilium/cilium versioning=semver
+cilium_version: "1.18.0" # renovate: datasource=github-releases depName=cilium/cilium versioning=semver
 cilium_cli_version: "v0.18.6" # renovate: datasource=github-tags depName=cilium/cilium-cli versioning=semver
 cilium_enable_hubble: false
 cilium_helm_values: {}
