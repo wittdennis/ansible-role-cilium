@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.15](https://github.com/wittdennis/ansible-role-cilium/compare/443b8f6d597f30f0569d8b07b23f36217e4bc508..1.3.15) - 2025-08-01
+#### Bug Fixes
+- **(deps)** update dependency cilium/cilium to v1.18.0 - ([a569b6c](https://github.com/wittdennis/ansible-role-cilium/commit/a569b6cae9c33f7f95d60b5831848c4d4d2c33f0)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium-cli to v0.18.6 - ([651d4a3](https://github.com/wittdennis/ansible-role-cilium/commit/651d4a36dfd218f6021b4373988784fdd803bd2d)) - wittdennis-renovate[bot]
+- **(deps)** update dependency cilium/cilium to v1.17.6 - ([bc4d09b](https://github.com/wittdennis/ansible-role-cilium/commit/bc4d09b1dcf591e7954ff44e1a0412be63b10618)) - wittdennis-renovate[bot]
+#### Miscellaneous Chores
+- **(deps)** update wittdennis/pipelines action to v1.11.29 - ([8c4ef6d](https://github.com/wittdennis/ansible-role-cilium/commit/8c4ef6d94e47487f0382b4377b41a2e69c6dc615)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.28 - ([de71cbc](https://github.com/wittdennis/ansible-role-cilium/commit/de71cbc7fe1aa5a9aff3c3ad92e337653e853f6f)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.27 - ([61592a9](https://github.com/wittdennis/ansible-role-cilium/commit/61592a961354973627f7340b915c7e69fb57c931)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.26 - ([443b8f6](https://github.com/wittdennis/ansible-role-cilium/commit/443b8f6d597f30f0569d8b07b23f36217e4bc508)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.3.14](https://github.com/wittdennis/ansible-role-cilium/compare/5ec77410385eb62a462bf6e5f58b8c2738e57a4a..1.3.14) - 2025-07-02
 #### Bug Fixes
 - **(deps)** update dependency cilium/cilium-cli to v0.18.5 - ([5753413](https://github.com/wittdennis/ansible-role-cilium/commit/57534130479b942a85dd5fdc1050d128d1f4a6f2)) - wittdennis-renovate[bot]
