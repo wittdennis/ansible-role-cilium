@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.20](https://github.com/wittdennis/ansible-role-cilium/compare/f8967b3224f858105c3127306be429f7b5ff2bd8..1.3.20) - 2025-10-24
+#### Bug Fixes
+- (**deps**) update dependency cilium/cilium to v1.18.3 - ([f8967b3](https://github.com/wittdennis/ansible-role-cilium/commit/f8967b3224f858105c3127306be429f7b5ff2bd8)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.3.19](https://github.com/wittdennis/ansible-role-cilium/compare/0c2a277c7049c8893429826dcdef463e48c7ccc1..1.3.19) - 2025-10-24
 #### Bug Fixes
 - (**deps**) update dependency cilium/cilium-cli to v0.18.8 - ([3a26c44](https://github.com/wittdennis/ansible-role-cilium/commit/3a26c44d212e947146f40486bf3bf19fc7aa49b2)) - wittdennis-renovate[bot]
