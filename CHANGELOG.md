@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.21](https://github.com/wittdennis/ansible-role-cilium/compare/b823bc30961269ad329e01e8f8334a76286e1ca7..1.3.21) - 2025-11-12
+#### Bug Fixes
+- (**deps**) update dependency cilium/cilium to v1.18.4 - ([b559e82](https://github.com/wittdennis/ansible-role-cilium/commit/b559e82a1c36b80fd4081ec888d4e1b87e9b6025)) - wittdennis-renovate[bot]
+#### Miscellaneous Chores
+- (**deps**) update pre-commit hook ansible-community/ansible-lint to v25.11.0 - ([7605de3](https://github.com/wittdennis/ansible-role-cilium/commit/7605de3c486a0fc8121e192a7490843826877ec0)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.7 - ([831b74d](https://github.com/wittdennis/ansible-role-cilium/commit/831b74dfdcc2a393fe61f9088aa49555cba21f16)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.6 - ([f7b96f7](https://github.com/wittdennis/ansible-role-cilium/commit/f7b96f737e4fc91ea3dac96d239dca9e62fdf506)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.5 - ([e02bd67](https://github.com/wittdennis/ansible-role-cilium/commit/e02bd6731752f226f622aff5e6e222e6fd4d90d0)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.4 - ([736e025](https://github.com/wittdennis/ansible-role-cilium/commit/736e02594a06e45d3a949a43be9798ab50d367de)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.3 - ([b823bc3](https://github.com/wittdennis/ansible-role-cilium/commit/b823bc30961269ad329e01e8f8334a76286e1ca7)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.3.20](https://github.com/wittdennis/ansible-role-cilium/compare/f8967b3224f858105c3127306be429f7b5ff2bd8..1.3.20) - 2025-10-24
 #### Bug Fixes
 - (**deps**) update dependency cilium/cilium to v1.18.3 - ([f8967b3](https://github.com/wittdennis/ansible-role-cilium/commit/f8967b3224f858105c3127306be429f7b5ff2bd8)) - wittdennis-renovate[bot]
