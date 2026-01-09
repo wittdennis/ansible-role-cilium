@@ -1,3 +1,4 @@
+# code: language=ansible
 ---
 - name: Determine host architecture
   ansible.builtin.shell:
@@ -35,7 +36,7 @@
     url: "{{ download_url }}"
     checksum: "sha256:{{ download_url }}.sha256sum"
     dest: /tmp
-    owner: "{{ ansible_user_id }}"
+    owner: "{{ ansible_facts['user_id'] }}"
     mode: "0644"
   when: current_cilium_cli_version.stdout != cilium_cli_version | default(false)
   notify: Unarchive cilium binary

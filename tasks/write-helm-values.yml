@@ -1,6 +1,7 @@
+# code: language=ansible
 ---
 - name: Save helm values file
-  when: cilium_helm_values
+  when: cilium_helm_values is defined and not cilium_helm_values == ''
   ansible.builtin.copy:
     content: |
       {{ cilium_helm_values | to_nice_yaml }}
