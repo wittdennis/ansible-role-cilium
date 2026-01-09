@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.24](https://github.com/wittdennis/ansible-role-cilium/compare/406e14d47702eacd442b4812de0b4111fc516c5d..1.3.24) - 2026-01-09
+#### Bug Fixes
+- bring up to date with current ansible versions - ([46cd47c](https://github.com/wittdennis/ansible-role-cilium/commit/46cd47cc375a64b771d08711443b36cad6b2034b)) - Dennis Witt
+#### Miscellaneous Chores
+- (**deps**) update wittdennis/pipelines action to v1.13.4 - ([d761369](https://github.com/wittdennis/ansible-role-cilium/commit/d761369ee16d40c4086d705491b479b34c801fd0)) - wittdennis-renovate[bot]
+- (**deps**) update pre-commit hook ansible-community/ansible-lint to v26 - ([6724f39](https://github.com/wittdennis/ansible-role-cilium/commit/6724f39267c4439b80f613ba1125ae3c216efcca)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.3 - ([66d11b3](https://github.com/wittdennis/ansible-role-cilium/commit/66d11b34fdc153358289d2d8b4c6d72c1b106fd9)) - wittdennis-renovate[bot]
+- (**deps**) update pre-commit hook ansible-community/ansible-lint to v25.12.2 - ([406e14d](https://github.com/wittdennis/ansible-role-cilium/commit/406e14d47702eacd442b4812de0b4111fc516c5d)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.3.23](https://github.com/wittdennis/ansible-role-cilium/compare/932103509e7130469dbe277f50bd3f5467286a55..1.3.23) - 2025-12-18
 #### Bug Fixes
 - (**deps**) update dependency cilium/cilium to v1.18.5 - ([d61a3d7](https://github.com/wittdennis/ansible-role-cilium/commit/d61a3d770f2e22da1f5b4d3679e22d0ed351d9a1)) - wittdennis-renovate[bot]
